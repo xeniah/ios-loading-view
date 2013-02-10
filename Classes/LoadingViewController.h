@@ -17,6 +17,7 @@
 @interface LoadingViewController : UIViewController
 
 - (IBAction)showLoadingView:(id)sender;
+- (IBAction)showLoadingViewWIthCoords:(id)sender;
 
 @end
 

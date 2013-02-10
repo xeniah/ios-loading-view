@@ -47,6 +47,16 @@
     [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:5.0];
 }
 
+- (IBAction)showLoadingViewWIthCoords:(id)sender
+{
+    CGRect rect = CGRectMake(10, 10, 200, 200);
+    LoadingView *loadingView = [LoadingView
+                                loadingViewInView:self.view
+                                withTitle:NSLocalizedString(@"Loading...", nil) inLoadingViewRect:rect];
+    
+    [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:5.0];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
